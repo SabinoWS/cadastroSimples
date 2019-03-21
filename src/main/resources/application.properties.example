@@ -1,5 +1,5 @@
 # MYSQL
-spring.datasource.url= jdbc:mysql://localhost:3306/SCHEMA?createDatabaseIfNotExist=true
+spring.datasource.url= jdbc:mysql://localhost:3306/cadastroSimples?createDatabaseIfNotExist=true&useSSL=false
 spring.datasource.username= root
 spring.datasource.password=
 
