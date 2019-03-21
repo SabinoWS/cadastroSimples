@@ -1,1 +1,32 @@
-CADASTRO
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head><meta charset="UTF-8"/></head>
+
+<body>
+ 	<section class="layout-content" layout:fragment="body">
+		<form th:action="@{/save}" method="POST">
+		    
+		    <div th:replace="fragments/alert"></div>
+		
+		    <div class="form-row">
+		        <div class="form-group col-md-6">
+		            <label for="name">Nome</label>
+		            <input type="text" class="form-control" id="name"
+		                   placeholder="Nome" autofocus="autofocus"/>
+		        </div>
+		    </div>
+		    
+		    <div class="form-row">
+		        <div class="form-group col-md-6">
+		            <label for="surname">Sobrenome</label>
+		            <input type="text" class="form-control" id="surname"
+		                   placeholder="Sobrenome"/>
+		        </div>
+		    </div>
+		    
+		    <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
+		</form>
+	</section>
+</body>
+	
+</html>
