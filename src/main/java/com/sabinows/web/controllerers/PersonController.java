@@ -27,8 +27,7 @@ public class PersonController {
 	public String save(@Valid Person person, BindingResult result, RedirectAttributes attr) {
 		
 		if (result.hasErrors()) {
-			attr.addFlashAttribute("fail", "Erro ao cadastrar.");
-			return "redirect:/";
+			return "/person/register";
 		}
 		
 		service.save(person);
