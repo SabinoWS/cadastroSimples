@@ -1,4 +1,4 @@
-package com.sabinows.web.controller;
+package com.sabinows.web.controllerers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
