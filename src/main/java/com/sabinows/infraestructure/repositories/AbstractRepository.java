@@ -7,7 +7,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-public abstract class AbstractDao<T, PK extends Serializable> {
+public abstract class AbstractRepository<T, PK extends Serializable> {
 
 	@SuppressWarnings("unchecked")
 	private final Class<T> entityClass = 
