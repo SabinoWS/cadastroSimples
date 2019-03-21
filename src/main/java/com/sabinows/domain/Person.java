@@ -10,17 +10,18 @@ import javax.validation.constraints.Size;
 public class Person extends AbstractEntity<Long> {
 
 	@NotBlank(message = "Informe um nome.")
-	@Size(min = 3, max = 60, message = "O nome da pessoa deve ter entre {min} e {max} caracteres.")
+	@Size(min = 3, max = 60, message = "O nome deve ter entre {min} e {max} caracteres.")
 	@Column(name = "name", nullable = false, length = 60)
 	private String name;
 	
-	@Size(min = 3, max = 60, message = "O sobrenome da pessoa deve ter entre {min} e {max} caracteres.")
+	@Size(min = 3, max = 60, message = "O sobrenome deve ter entre {min} e {max} caracteres.")
 	@Column(name = "surname", nullable = true, length = 60)
 	private String surname;
 	
 	@Column(name = "telephone", nullable = true, length = 12)
 	private String telephone;
 	
+	@Size(min = 10, message = "O celular deve ter no mínimo {min} caracteres.")
 	@Column(name = "cellphone", nullable = true, length = 12)
 	private String cellphone;
 	
