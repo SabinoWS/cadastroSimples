@@ -4,7 +4,9 @@
 
 <body>
  	<section class="layout-content" layout:fragment="body">
-		<form th:action="@{/save}" method="POST">
+		<form th:action="@{/save}"
+			  th:object="${person}"
+			  method="POST">
 		    
 		    <div th:replace="fragments/alert"></div>
 		
@@ -12,6 +14,7 @@
 		        <div class="form-group col-md-6">
 		            <label for="name">Nome</label>
 		            <input type="text" class="form-control" id="name"
+		            	   th:field="*{name}"
 		                   placeholder="Nome" autofocus="autofocus"/>
 		        </div>
 		    </div>
@@ -20,7 +23,35 @@
 		        <div class="form-group col-md-6">
 		            <label for="surname">Sobrenome</label>
 		            <input type="text" class="form-control" id="surname"
+		            	   th:field="*{surname}"
 		                   placeholder="Sobrenome"/>
+		        </div>
+		    </div>
+		    
+		    <div class="form-row">
+		        <div class="form-group col-md-6">
+		            <label for="cpf">CPF</label>
+		            <input type="text" class="form-control" id="cpf"
+		            	   th:field="*{cpf}"
+		                   placeholder="CPF"/>
+		        </div>
+		    </div>
+		    
+		    <div class="form-row">
+		        <div class="form-group col-md-6">
+		            <label for="surname">Telefone</label>
+		            <input type="text" class="form-control" id="telephone"
+		            	   th:field="*{telephone}"
+		                   placeholder="Telefone"/>
+		        </div>
+		    </div>
+		    
+		    <div class="form-row">
+		        <div class="form-group col-md-6">
+		            <label for="cellphone">Celular</label>
+		            <input type="text" class="form-control" id="cellphone"
+		            	   th:field="*{cellphone}"
+		                   placeholder="Celular"/>
 		        </div>
 		    </div>
 		    
