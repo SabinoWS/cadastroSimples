@@ -18,11 +18,11 @@ public class Person extends AbstractEntity<Long> {
 	@Column(name = "surname", nullable = true, length = 60)
 	private String surname;
 	
-	@Column(name = "telephone", nullable = true, length = 12)
+	@Column(name = "telephone", nullable = true, length = 15)
 	private String telephone;
 	
 	@Size(min = 10, message = "O celular deve ter no mínimo {min} caracteres.")
-	@Column(name = "cellphone", nullable = true, length = 12)
+	@Column(name = "cellphone", nullable = true, length = 15)
 	private String cellphone;
 	
 	@NotBlank(message = "Informe um CPF.")
